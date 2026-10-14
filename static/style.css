@@ -209,3 +209,7 @@ header {
     width: 150px;
 }
 
+footer {
+    text-align: center;
+    padding-top: 20px;
+}
