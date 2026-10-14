@@ -1,0 +1,36 @@
+<html>
+    {{ head.html "Pyto" }}
+    <body>
+        <header>
+            {{ menu/menu.html }}
+            <div id="banner">
+                <picture>
+                    <source srcset="%WEB_ROOT%/static/banner-light.png" media="(prefers-color-scheme: light) and (min-width: 600px)"/>
+                    <source srcset="%WEB_ROOT%/static/banner-dark.png"  media="(prefers-color-scheme: dark) and (min-width: 600px)"/>
+                    <source srcset="%WEB_ROOT%/static/banner-light-small.png" media="(prefers-color-scheme: light) and (max-width: 599px)"/>
+                    <source srcset="%WEB_ROOT%/static/banner-dark-small.png"  media="(prefers-color-scheme: dark) and (max-width: 599px)"/>
+                    <img src="%WEB_ROOT%/static/banner-light.png"/>
+                </picture> 
+            </div>
+        </header>
+        <div id="content">
+            <strong style="text-align: center">New update coming soon!</strong>
+            <p style="text-align: center">Pyto is a Python and WebAssembly development environment for iPhone, iPad and Mac using <a href="https://git.gatit.es/pyto/pyto-runtime">PytoRuntime</a>.</p>
+            <br/>
+            <div id="features">
+                {{ feature.html "Code Editor" "pencil" "Intelligent editor with code completion, jump to definition and a tree browser." }}
+                {{ feature.html "Python Interpreter" "python" "Local Python interpreter with script isolation and patches to bring missing features to iOS like signals, subprocesses and terminal emulation." }}
+                {{ feature.html "Python Packages" "box" "Popuplar Python packages with native extensions pre-installed and pip to install pure Python packages." }}
+                {{ feature.html "Python Debugger" "bug" "Debugger for Python scripts with breakpoints and namespace browser." }}
+                {{ feature.html "Built-in Modules" "cubes" "Built-in Python modules to interact with OS features." }}
+                {{ feature.html "WebAssembly Runtime" "webassembly" "WebAssembly running locally on WebKit with support for WASI Preview 1 and WASIX syscalls." }}
+                {{ feature.html "Command Line" "terminal" "Terminal and shell with common commands and development tools like git, ninja and pkgconf." }}
+                {{ feature.html "LLVM Compilers" "llvm" "Compilers for C/C++/Fortran, a WebAssembly linker and more LLVM tools." }}
+                {{ feature.html "Meson Integration" "meson" "Integration for compiling, executing and installing Meson projects as well as modifying targets."}}
+                {{ feature.html "Virtual Environments" "gear" "Virtual Environments management for Python and compilers." }}
+                {{ feature.html "Shortcuts Integration" "stack" "Shortcuts for integrating Pyto into your automations." }}
+                {{ feature.html "Home Screen Widgets" "grid" "Widgets for showing custom content in your home screen." }}
+            </div>
+        </div>
+    </body>
+</html>

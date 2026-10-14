@@ -1,0 +1,211 @@
+:root {
+    --background-color: white;
+    --foreground-color: rgb(2, 111, 2);
+    --link-color: rgb(50, 150, 100);
+    --feature-icon-color: rgb(240, 240, 240);
+
+    --feature-icon-size: 30px;
+    --feature-title-size: 22px;
+
+    --font-size: 16px;
+    --font-family: "Courier New", monospace;    
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(10, 40, 10);
+        --foreground-color: white;
+        --link-color: rgb(222, 250, 255);
+        --feature-icon-color: rgb(10, 80, 10);
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    line-height: 1.5;
+    margin: 10px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.menu-icon {
+    color: var(--link-light);
+}
+
+.feature-header {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feature-icon {
+    background-color: var(--feature-icon-color);
+    border-radius: 50%;
+    width: calc(var(--feature-icon-size) + 20px);
+    height: calc(var(--feature-icon-size) + 20px);
+}
+
+.feature-icon > svg {
+    width: var(--feature-icon-size);
+    height: var(--feature-icon-size);
+    padding: 10px;
+}
+
+.feature {
+    min-width: 100%;
+    text-align: center;
+    flex: 1;
+}
+
+.feature-title {
+    font-size: var(--feature-title-size);
+}
+
+@media (min-width: 700px) {
+    .feature {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+#features {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    justify-content: center;
+    gap: 30px;
+    container-type: inline-size;
+}
+
+header {
+    display: flex;
+}
+
+@media (max-width: 799px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu > ul > .release-link {
+        display: none;
+    }
+}
+
+@media (min-width: 799px) {
+    #releases-list-bottom {
+        display: none;
+    }
+}
+
+#menu {
+    margin: 10px;
+    text-align: center;
+    justify-content: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+#menu > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu > ul > li {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.menu-icon > svg {
+    width: var(--font-size);
+    height: var(--font-size);
+}
+
+@media (min-width: 799px) {
+    #menu {
+        width: 300px;
+    }
+    
+    #menu > ul {
+        text-align: right;
+    }
+}
+
+@media (max-width: 799px) {
+    #menu > ul > li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+#menu > ul > .release-link {
+    padding-left: calc(var(--font-size) + 10px);
+}
+
+#menu > ul > .all-releases-link {
+    padding-left: calc(var(--font-size) + 10px);
+}
+
+#releases-list-bottom > ul > .release-link {
+    display: flex;
+    gap: 10px;
+}
+
+#releases-list-bottom > ul {
+    list-style: none;
+    padding-left: 24px;
+}
+
+@media (min-width: 799px) {
+    #menu > ul > .all-releases-link {
+        display: none;
+    }
+}
+
+* {
+    vertical-align: middle;
+}
+
+#content {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    width: 100%;
+}
+
+#app-icon > img {
+    width: 150px;
+}
+
+#banner {
+    width: 100%;
+}
+
+#banner > picture > img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+#appstore {
+    margin-top: 20px;
+}
+
+#appstore > picture > img {
+    width: 150px;
+}
+
