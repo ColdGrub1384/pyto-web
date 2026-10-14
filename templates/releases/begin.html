@@ -1,0 +1,13 @@
+<html>
+    {{ head.html "Version %1%" }}
+    <style>
+        @media (min-width: 800px) {
+            body {
+                display: flex;
+            }
+        }
+    </style>
+    <body>
+        {{ menu/releases.html }}
+        <div id="content" style="width: 100%">
+            <h1>Version %1%</h1>

@@ -1,0 +1,28 @@
+{{ releases/begin.html "20.0.0" }}
+    <p>Along with the new version of Pyto, I am releasing <a href="https://git.gatit.es/pyto/pyto-runtime">PytoRuntime</a>. It is a package containing all components for Python to run on Apple sandboxed environments (Interpreter, Packages, Libraries, Patches) and a high level API for integration with the frontend.</p>
+    <h2>New app features</h2>
+    <ul>
+        <li>New native Mac app</li>
+        <li>New design adapted for Liquid Glass</li>
+        <li>Removed left sidebar and added an inspector</li>
+        <li>Added a tab bar in the code editor</li>
+        <li>Re-designed the tree explorer and re-wrote with tree-sitter</li>
+        <li>Text settings can now be applied to files individually</li>
+        <li>Added editorconfig support</li>
+        <li>App settings and themes are now stored as JSON</li>
+        <li>Added a Jump To action in the code editor</li>
+        <li>The terminal below the editor now supports multiple sessions</li>
+        <li>New virtual environment manager</li>
+        <li>Git integration in the file browser</li> 
+    </ul>
+    <h2>Tooling changes</h2>
+    <ul>
+        <li>Updated packages and Python to 3.14</li>
+        <li>Various improvements to shell</li>
+        <li>Added a WebAssembly runtime supporting WASIX syscalls</li>
+        <li>Added 'pytorch' and 'llama-cpp' and other packages</li>
+        <li>Added 'curses', 'termios' and 'readline' modules</li>
+        <li>Added a 'git' command based on libgit2</li>
+        <li>Added 'ninja' and 'pkgconf'</li> 
+    </ul>
+{{ releases/end.html }}
