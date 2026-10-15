@@ -25,7 +25,7 @@ def releases_list():
 
 def releases_latest():
     latest = get_releases_list()[0]
-    print(f"%WEB_ROOT%/releases/{latest}.html", end="")
+    print(f"%WEB_ROOT%releases/{latest}.html", end="")
 
 
 def main():
